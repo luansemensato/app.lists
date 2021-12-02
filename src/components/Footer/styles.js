@@ -1,9 +1,12 @@
 import styled, { css } from 'styled-components';
 
-export const Link = styled.a`
+export const Footer = styled.footer`
   ${({ theme }) => css`
-    display: block;
-    text-align: center;
     margin-top: ${theme.spacings.xlarge};
+    text-align: center;
+
+    a {
+      display: block;
+    }
   `}
 `;

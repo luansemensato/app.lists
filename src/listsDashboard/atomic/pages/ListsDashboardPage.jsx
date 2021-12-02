@@ -3,9 +3,8 @@ import React, { useState, useCallback, useMemo } from 'react';
 import withLists from 'listsDashboard/withLists';
 
 import Layout from 'components/Layout';
-import Posts from 'listsDashboard/components/Posts';
-import Albums from 'listsDashboard/components/Albums';
-import Todos from 'listsDashboard/components/Todos';
+import Posts from 'listsDashboard/atomic/organisms/Posts';
+import Albums from 'listsDashboard/atomic/organisms/Albums';
 
 const ListsDashboardPage = () => {
   const tabs = useMemo(
@@ -19,11 +18,6 @@ const ListsDashboardPage = () => {
         title: 'Albums',
         code: 'albums',
         content: <Albums />
-      },
-      {
-        title: 'Todos',
-        code: 'todos',
-        content: <Todos />
       }
     ], []
   );

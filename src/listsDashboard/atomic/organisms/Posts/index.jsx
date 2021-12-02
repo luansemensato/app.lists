@@ -10,10 +10,8 @@ import usePosts from 'listsDashboard/hooks/posts';
 import withLists from 'listsDashboard/withLists';
 
 // Components
-import List from 'components/List';
-
-// Styles
-import * as S from './styles';
+import PageHeader from 'listsDashboard/atomic/molecules/PageHeader';
+import List from 'listsDashboard/atomic/molecules/List';
 
 function Posts() {
   const { getPostsData } = usePosts();
@@ -26,18 +24,14 @@ function Posts() {
   }, []);
 
   return (
-    <S.Wrapper>
-      {postsLoading && <p>Carregando posts...</p>}
+    <main>
+      <PageHeader
+        title="Posts"
+        description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt et, excepturi, tenetur accusamus quis non, rerum fugit sunt aperiam enim illum."
+      />
 
-      {postsError && <p>Ops! Não foi possível carregar os posts :(</p>}
-
-      {posts && (
-        <>
-          <h1>Posts</h1>
-          <List items={posts} />
-        </>
-      )}
-    </S.Wrapper>
+      <List items={posts} loading={postsLoading} error={postsError} />
+    </main>
   );
 }
 

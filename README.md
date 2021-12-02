@@ -6,6 +6,7 @@ This project uses lot of stuff as:
 - [Styled Components](https://styled-components.com/)
 - [Axios](https://axios-http.com/docs/intro)
 - [Context](https://pt-br.reactjs.org/docs/context.html)
+- Atomic Design Pattern
 
 ## Getting Started
 

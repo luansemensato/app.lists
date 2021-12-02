@@ -10,10 +10,8 @@ import useAlbums from 'listsDashboard/hooks/albums';
 import withLists from 'listsDashboard/withLists';
 
 // Components
-import List from 'components/List';
-
-// Styles
-import * as S from './styles';
+import PageHeader from 'listsDashboard/atomic/molecules/PageHeader';
+import List from 'listsDashboard/atomic/molecules/List';
 
 function Albums() {
   const { getAlbumsData } = useAlbums();
@@ -26,18 +24,14 @@ function Albums() {
   }, []);
 
   return (
-    <S.Wrapper>
-      {albumsLoading && <p>Carregando albums...</p>}
+    <main>
+      <PageHeader
+        title="Albums"
+        description="Lorem ipsum Albums, dolor sit amet consectetur adipisicing elit. Incidunt et, excepturi, tenetur accusamus quis non, rerum fugit sunt aperiam enim illum."
+      />
 
-      {albumsError && <p>Ops! Não foi possível carregar os albums :(</p>}
-
-      {albums && (
-        <>
-          <h1>Albums</h1>
-          <List items={albums} />
-        </>
-      )}
-    </S.Wrapper>
+      <List items={albums} loading={albumsLoading} error={albumsError} />
+    </main>
   );
 }
 

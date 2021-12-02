@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ListsDashboardPage from 'listsDashboard/ListsDashboardPage';
+import ListsDashboardPage from 'listsDashboard/atomic/pages/ListsDashboardPage';
 
 function App() {
   return (

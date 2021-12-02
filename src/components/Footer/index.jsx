@@ -5,11 +5,11 @@ import * as S from './styles';
 
 const Footer = () => {
   return (
-    <footer>
-      <S.Link href="https://luansemensato.com?utm_source=portfolio&utm_medium=lists&utm_campaign=footer" target="_blank" rel="noopener noreferrer">
+    <S.Footer>
+      <a href="https://luansemensato.com?utm_source=portfolio&utm_medium=lists&utm_campaign=S.Footer" target="_blank" rel="noopener noreferrer">
         Luan Semensato | Front-end Developer
-      </S.Link>
-    </footer>
+      </a>
+    </S.Footer>
   );
 }
 
